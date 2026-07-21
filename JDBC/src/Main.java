@@ -1,8 +1,5 @@
 // 1. import java sql packages
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.*;
 public class Main {
     public static void main(String[] args) {
@@ -26,7 +23,16 @@ public class Main {
             PreparedStatement pstmt = con.prepareStatement("INSERT INTO users (name, email) VALUES (?, ?)");
             pstmt.setString(1, "Jane Smith");
             pstmt.setString(2, " smith@gmail.com");
-            pstmt.executeUpdate();
+//            pstmt.executeUpdate();
+
+            // Using ResultSet
+            PreparedStatement pst = con.prepareStatement("Select * from users");
+            ResultSet rst = pst.executeQuery();
+            while (rst.next()) {
+                int id = rst.getInt("id");  // column name or column number can be used
+                String name = rst.getString("name");  // column name or column number can be used
+                System.out.println("ID: " + id + ", Name: " + name);
+            }
 
             // 5. Execute the SQL statement
 //            stmt.executeUpdate(insertSql);
