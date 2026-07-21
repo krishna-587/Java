@@ -1,5 +1,5 @@
 ## Steps for JDBC setup and configuration:
-1 . **Import Required Packages**: 
+###1 . **Import Required Packages**: 
         Import the necessary Java packages for JDBC, 
         such as `java.sql.Connection`, `java.sql.DriverManager`, `java.sql.Statement`, and `java.sql.ResultSet` or `java.sql.*`.
 2 .**Download JDBC Driver**: 
