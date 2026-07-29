@@ -50,10 +50,11 @@ Throwable
 │   │   ├── ArithmeticException
 │   │   ├── ArrayIndexOutOfBoundsException
 │   │   └── ClassCastException
+│   │    └── IllegalArgumentException
 │   │
 │   ├── IOException
 │   │   └── FileNotFoundException
-│   │
+│   │    └── EOFException
 │   └── SQLException
 │
 └── Error
